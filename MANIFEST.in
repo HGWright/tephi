@@ -28,7 +28,7 @@ recursive-include tephi *.py *.json *.npz *.txt
 #---------
 # SECTION: requirements
 prune requirements
-recursive-include requirements *.yml
+recursive-include requirements *.txt
     # principles:
     #    include just requirements-level info, not lock files
     # hints:

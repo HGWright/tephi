@@ -26,17 +26,6 @@ recursive-include tephi *.py *.json *.npz *.txt
 
 
 #---------
-# SECTION: docs
-prune docs
-# and if required ... include ONLY docs source files.
-# E.G. recursive-include docs *.rst *.inc
-    # principles:
-    #    - use prune to ignore everything (optionally: except the docs sources)
-    # hints:
-    #    - most projects don't want to package the docs, but some currently do (cf-units).
-
-
-#---------
 # SECTION: requirements
 prune requirements
 recursive-include requirements *.yml
@@ -45,7 +34,6 @@ recursive-include requirements *.yml
     # hints:
     #    - not all projects include requirements, but they can be drawn in anyway by dynamic dependencies
     #        in the setuptools build process, linked via config in pyproject.toml
-    #    - for some repos, the *.txt are actually lockfiles.  This probably needs fixing.
 
 
 #---------
@@ -89,6 +77,7 @@ prune .github
 prune .nox
 prune .tox
 prune .coverage
+prune docs
 # (2) top-level files to omit
 exclude .coveragerc
 exclude index.ipynb
